@@ -1,6 +1,6 @@
 # Password Generator
 
-This is a Password Generator application built using Python and Tkinter. The application allows users to generate strong, secure passwords based on customizable criteria.
+This is a Password Generator application built using Python and Tkinter. The application allows users to generate strong, secure passwords based on a customizable criteria.
 
 ## Features
 
@@ -69,6 +69,10 @@ This is a Password Generator application built using Python and Tkinter. The app
 - `utils.py`: Contains utility functions such as copying text to the clipboard.
 
 ## Screenshots
+
+![Dark Mode](Screenshots/DarkMode.png)
+
+![Light Mode](Screenshots/LightMode.png)
 
 ## Customization
 
