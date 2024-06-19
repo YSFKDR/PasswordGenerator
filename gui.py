@@ -45,6 +45,7 @@ def run_app():
         password_entry.config(bg="#3b3b3b", fg="white")
         slider_frame.config(bg="#3b3b3b")
         length_slider.config(bg="#3b3b3b", fg="white", troughcolor="#3b3b3b")
+        options_frame.config(bg="#2e2e2e")
         letters_check.config(bg="#2e2e2e", fg="white", selectcolor="#3b3b3b")
         mixed_case_check.config(bg="#2e2e2e", fg="white", selectcolor="#3b3b3b")
         punctuation_check.config(bg="#2e2e2e", fg="white", selectcolor="#3b3b3b")
@@ -59,6 +60,7 @@ def run_app():
         password_entry.config(bg="#ffffff", fg="black")
         slider_frame.config(bg="#ffffff")
         length_slider.config(bg="#ffffff", fg="black", troughcolor="#e0e0e0")
+        options_frame.config(bg="#f0f0f0")
         letters_check.config(bg="#f0f0f0", fg="black", selectcolor="#ffffff")
         mixed_case_check.config(bg="#f0f0f0", fg="black", selectcolor="#ffffff")
         punctuation_check.config(bg="#f0f0f0", fg="black", selectcolor="#ffffff")
@@ -103,19 +105,22 @@ def run_app():
     length_slider.pack(padx=10, pady=5, fill="x")
 
     # Checkboxes for options
+    options_frame = tk.Frame(window)
+    options_frame.pack(pady=10)
+
     letters_var = tk.BooleanVar(value=True)
     mixed_case_var = tk.BooleanVar(value=True)
     punctuation_var = tk.BooleanVar(value=True)
     numbers_var = tk.BooleanVar(value=True)
 
-    letters_check = tk.Checkbutton(window, text="Letters", variable=letters_var, font=font_style)
-    letters_check.pack()
-    mixed_case_check = tk.Checkbutton(window, text="Mixed case", variable=mixed_case_var, font=font_style)
-    mixed_case_check.pack()
-    punctuation_check = tk.Checkbutton(window, text="Punctuation", variable=punctuation_var, font=font_style)
-    punctuation_check.pack()
-    numbers_check = tk.Checkbutton(window, text="Numbers", variable=numbers_var, font=font_style)
-    numbers_check.pack()
+    letters_check = tk.Checkbutton(options_frame, text="Letters", variable=letters_var, font=font_style)
+    letters_check.grid(row=0, column=0, sticky="w")
+    mixed_case_check = tk.Checkbutton(options_frame, text="Mixed case", variable=mixed_case_var, font=font_style)
+    mixed_case_check.grid(row=1, column=0, sticky="w")
+    punctuation_check = tk.Checkbutton(options_frame, text="Punctuation", variable=punctuation_var, font=font_style)
+    punctuation_check.grid(row=2, column=0, sticky="w")
+    numbers_check = tk.Checkbutton(options_frame, text="Numbers", variable=numbers_var, font=font_style)
+    numbers_check.grid(row=3, column=0, sticky="w")
 
     # Generate and copy buttons
     generate_button = tk.Button(window, text="Generate Password", command=generate, font=font_style, bg="#4CAF50", fg="white", activebackground="#45a049", width=20, bd=0, padx=10, pady=10)
