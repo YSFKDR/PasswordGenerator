@@ -52,6 +52,9 @@ This is a Password Generator application built using Python and Tkinter. The app
    ```markdown
    Password-Generator/
    ├── 
+   ├── Screenshots/           # Folder containing screenshots of the application.
+    ├── DarkMode.png          # Dark mode screenshot.
+    ├── LightMode.png         # Light mode screenshot.
    ├── main.py                # Entry point for the application.
    ├── gui.py                 # Contains the user interface code.
    ├── password_generator.py  # Contains the logic for generating passwords.
